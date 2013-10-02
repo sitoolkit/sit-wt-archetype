@@ -2,7 +2,7 @@
 
 call "%~dp000_setbuildenv"
 
-set RES_DIR=%PRJ_ROOT%\build\archetype\src
+set RES_DIR=%~dp0archetype\src
 
 if exist "%RES_DIR%" (
 	echo ## アーキタイプ資源ディレクトリを削除します。

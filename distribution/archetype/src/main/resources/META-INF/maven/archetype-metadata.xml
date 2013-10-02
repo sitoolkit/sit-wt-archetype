@@ -4,7 +4,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <fileSets>
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>build</directory>
+      <directory>distribution/archetype</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>distribution</directory>
       <includes>
         <include>**/*.txt</include>
       </includes>
@@ -16,7 +22,7 @@
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
-      <directory>build</directory>
+      <directory>distribution</directory>
       <includes>
         <include>**/*.cmd</include>
       </includes>

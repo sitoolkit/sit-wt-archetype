@@ -18,11 +18,6 @@
 			<version>${sit-tester.version}</version>
 		</dependency>
 	</dependencies>
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.report.encoding>UTF-8</project.report.encoding>
@@ -187,8 +182,5 @@
 			</build>
 		</profile>
 	</profiles>
-
-	<name>sit-tester-archetype</name>
-	<url>https://github.com/sitoolkit</url>
 
 </project>

@@ -1,0 +1,42 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-setup</actionName>
+            <displayName>setup</displayName>
+            <goals>
+				<goal>clean</goal>
+                <goal>dependency:unpack</goal>
+            </goals>
+            <activatedProfiles>
+                <activatedProfile>setup</activatedProfile>
+            </activatedProfiles>
+        </action>
+        <action>
+            <actionName>CUSTOM-ci-test</actionName>
+            <displayName>ci-test</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>test</goal>
+            </goals>
+            <activatedProfiles>
+                <activatedProfile>ci</activatedProfile>
+            </activatedProfiles>
+        </action>
+        <action>
+            <actionName>CUSTOM-jetty:stop</actionName>
+            <displayName>jetty:stop</displayName>
+            <goals>
+                <goal>jetty:stop</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-jetty:start</actionName>
+            <displayName>jetty:start</displayName>
+            <goals>
+                <goal>jetty:start</goal>
+            </goals>
+        </action>
+    </actions>
