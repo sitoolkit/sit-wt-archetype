@@ -1,3 +1,4 @@
 /src/main/webapp/
 /src/test/resources/testscript/
 /src/main/resources/
+/build/archetype/target/

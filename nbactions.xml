@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
         <action>
-            <actionName>CUSTOM-jetty:stop</actionName>
-            <displayName>jetty:stop</displayName>
+            <actionName>CUSTOM-setup</actionName>
+            <displayName>setup</displayName>
             <goals>
-                <goal>jetty:stop</goal>
+				<goal>clean</goal>
+                <goal>dependency:unpack</goal>
             </goals>
-        </action>
-        <action>
-            <actionName>CUSTOM-jetty:start</actionName>
-            <displayName>jetty:start</displayName>
-            <goals>
-                <goal>jetty:start</goal>
-            </goals>
+            <activatedProfiles>
+                <activatedProfile>setup</activatedProfile>
+            </activatedProfiles>
         </action>
         <action>
             <actionName>CUSTOM-ci-test</actionName>
@@ -26,14 +23,17 @@
             </activatedProfiles>
         </action>
         <action>
-            <actionName>CUSTOM-extract-resources</actionName>
-            <displayName>extract-resources</displayName>
+            <actionName>CUSTOM-jetty:stop</actionName>
+            <displayName>jetty:stop</displayName>
             <goals>
-				<goal>clean</goal>
-                <goal>dependency:unpack</goal>
+                <goal>jetty:stop</goal>
             </goals>
-            <activatedProfiles>
-                <activatedProfile>extract-resources</activatedProfile>
-            </activatedProfiles>
+        </action>
+        <action>
+            <actionName>CUSTOM-jetty:start</actionName>
+            <displayName>jetty:start</displayName>
+            <goals>
+                <goal>jetty:start</goal>
+            </goals>
         </action>
     </actions>

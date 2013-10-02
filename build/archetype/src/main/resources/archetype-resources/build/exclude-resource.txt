@@ -1,0 +1,4 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+${symbol_escape}generated-sources${symbol_escape}archetype${symbol_escape}target${symbol_escape}
