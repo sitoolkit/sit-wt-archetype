@@ -3,12 +3,17 @@ if defined JAVA_HOME goto set_maven_home
 for /F "usebackq" %%i in (`dir "%ProgramFiles%\Java\jdk*" /B /ON`) do @set JAVA_HOME=%ProgramFiles%\Java\%%i
 
 :set_maven_home
-if defined MAVEN_HOME goto set_path
+if defined MAVEN_HOME goto set_maven_cmd
 
-for /F "usebackq" %%i in (`dir "\sit\apache-maven*" /AD /B /ON /S`) do @set MAVEN_HOME=%%i
-set PATH=%PATH%;%MAVEN_HOME%\bin
+set MAVEN_HOME=C:\sit\apache-maven-3.0.5
+if not exist "%MAVEN_HOME%" (
+	set MAVEN_HOME=D:\sit\apache-maven-3.0.5
+)
 
-:set_path
+:set_maven_cmd
+set MVN_CMD=%MAVEN_HOME%\bin\mvn
+
+
 cd /D %~dp0..
 set PRJ_ROOT=%CD%
 set WORK_DIR=%TEMP%\sit-tester-archetype-work

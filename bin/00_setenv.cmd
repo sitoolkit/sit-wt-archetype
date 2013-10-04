@@ -1,13 +1,15 @@
 
-for /F "usebackq" %%i in (`dir /B /ON "%ProgramFiles%\java\jdk*"`) do @set JAVA_HOME=%ProgramFiles%\Java\%%i
-if defined MAVEN_HOME (
-	goto setpath
+if defined JAVA_HOME goto set_maven_home
+for /F "usebackq" %%i in (`dir "%ProgramFiles%\Java\jdk*" /B /ON`) do @set JAVA_HOME=%ProgramFiles%\Java\%%i
+
+:set_maven_home
+if defined MAVEN_HOME goto set_maven_cmd
+
+set MAVEN_HOME=C:\sit\apache-maven-3.0.5
+if not exist "%MAVEN_HOME%" (
+	set MAVEN_HOME=D:\sit\apache-maven-3.0.5
 )
 
-for /F "usebackq" %%i in (`dir /B /ON "C:\sit\apache-maven*"`) do @set MAVEN_HOME=C:\sit\%%i
-if not exist "%MAVEN_HOME%" (
-	for /F "usebackq" %%i in (`dir /B /ON "D:\sit\apache-maven*"`) do @set MAVEN_HOME=D:\sit\%%i
-)
-:setpath
-set PATH=%PATH%;%MAVEN_HOME%\bin
+:set_maven_cmd
+set MVN_CMD=%MAVEN_HOME%\bin\mvn
 

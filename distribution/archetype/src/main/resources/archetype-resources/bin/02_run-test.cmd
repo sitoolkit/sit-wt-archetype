@@ -2,7 +2,8 @@
 
 cd /D %~dp0
 
-call 00_setenv
-call mvn -P ci clean test
+call "%~dp000_setenv"
+cd /D %~dp0..\
+call "%MVN_CMD%" -P ci clean test
 
 pause
