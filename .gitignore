@@ -1,6 +1,2 @@
-/src/main/webapp/
-/src/test/resources/testscript/
-/src/main/resources/
-/build/archetype/target/
-/distribute/archetype/target/
-/distribution/archetype/target/
+
+/target
