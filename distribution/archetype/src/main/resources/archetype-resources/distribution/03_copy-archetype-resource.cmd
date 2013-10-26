@@ -26,8 +26,7 @@ rem ファイルリネーム＆文字列置換
 rem 
 :rename-file
 set in_file=%1
-rem set out_file=%in_file:sit-tester-archetype=__artifactId__%
-set out_file=%in_file:sit-tester-archetype=sit-tester%
+set out_file=%in_file:sit-tester-archetype=__artifactId__%
 
 echo #set( $symbol_pound = '#' )>%out_file%
 echo #set( $symbol_dollar = '$' )>>%out_file%
