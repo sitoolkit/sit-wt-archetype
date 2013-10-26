@@ -1,4 +1,5 @@
 @echo off
+setlocal enabledelayedexpansion
 
 call "%~dp000_setbuildenv"
 
@@ -16,11 +17,24 @@ xcopy /E /I /Q /S /EXCLUDE:%~dp0exclude-resource.txt "%WORK_DIR%\target\generate
 cd /D "%RES_DIR%\main\resources\archetype-resources\.settings"
 for %%i in (sit-tester-archetype*) do call :rename-file %%i
 
+endlocal
 pause
 goto :eof
 
+rem 
+rem ファイルリネーム＆文字列置換
+rem 
 :rename-file
-set file_name=%1
-set file_name=%file_name:sit-tester-archetype=__rootArtifactId__%
-rename %1 %file_name%
+set in_file=%1
+set out_file=%in_file:sit-tester-archetype=__artifactId__%
+
+echo #set( $symbol_pound = '#' )>%out_file%
+echo #set( $symbol_dollar = '$' )>>%out_file%
+echo #set( $symbol_escape = '\' )>>%out_file%
+
+for /f "delims=" %%j in (%in_file%) do (
+    set line=%%j
+    echo !line:${workspace_loc:/sit-tester-archetype}=${symbol_dollar}{workspace_loc:/${artifactId}}!>>%out_file%
+)
+del %in_file%
 goto :eof
