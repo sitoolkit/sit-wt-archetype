@@ -4,7 +4,7 @@
 
 	<groupId>org.sitoolkit.tester</groupId>
 	<artifactId>sit-tester-archetype</artifactId>
-	<version>0.6</version>
+	<version>0.6.1</version>
 	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
