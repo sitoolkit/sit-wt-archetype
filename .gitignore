@@ -1,7 +1,10 @@
+/src/main/java/
 /src/main/webapp/
-/src/test/resources/testscript/
 /src/main/resources/
+/src/test/java/
+/src/test/resources/
 /build/archetype/target/
 /distribute/archetype/target/
 /distribution/archetype/target/
+/distribution/archetype/src/test/resources/projects/basic/archetype.properties
 /target/
