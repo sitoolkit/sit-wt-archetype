@@ -21,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.report.encoding>UTF-8</project.report.encoding>
-		<sit-tester.version>0.6</sit-tester.version>
+		<sit-tester.version>0.7-SNAPSHOT</sit-tester.version>
 	</properties>
 
 	<build>
