@@ -22,6 +22,12 @@
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
+      <directory>debug</directory>
+      <includes>
+        <include>**/*.cmd</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
       <directory>bin</directory>
       <includes>
         <include>**/*.cmd</include>
