@@ -4,7 +4,7 @@
 
 	<groupId>org.sitoolkit.tester</groupId>
 	<artifactId>sit-tester-archetype</artifactId>
-	<version>0.7-SNAPSHOT</version>
+	<version>0.7</version>
 	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
@@ -21,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.report.encoding>UTF-8</project.report.encoding>
-		<sit-tester.version>0.7-SNAPSHOT</sit-tester.version>
+		<sit-tester.version>0.7</sit-tester.version>
 	</properties>
 
 	<build>
