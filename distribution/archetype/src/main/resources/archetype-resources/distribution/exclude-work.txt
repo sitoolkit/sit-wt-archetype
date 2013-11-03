@@ -6,3 +6,7 @@ ${symbol_escape}build${symbol_escape}archetype${symbol_escape}
 ${symbol_escape}src${symbol_escape}
 ${symbol_escape}target${symbol_escape}
 .gitignore
+${symbol_escape}bin${symbol_escape}.pause
+${symbol_escape}bin${symbol_escape}.step-back
+${symbol_escape}bin${symbol_escape}.step-forward
+

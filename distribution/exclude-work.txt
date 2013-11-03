@@ -3,3 +3,7 @@
 \src\
 \target\
 .gitignore
+\bin\.pause
+\bin\.step-back
+\bin\.step-forward
+
