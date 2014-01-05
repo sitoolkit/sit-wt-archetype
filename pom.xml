@@ -21,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.report.encoding>UTF-8</project.report.encoding>
-		<sit-tester.version>0.7</sit-tester.version>
+		<sit-tester.version>0.8.2</sit-tester.version>
 	</properties>
 
 	<build>
@@ -126,39 +126,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>8.1.12.v20130726</version>
-				<configuration>
-					<daemon>true</daemon>
-					<connectors>
-						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-							<port>8280</port>
-							<maxIdleTime>60000</maxIdleTime>
-						</connector>
-					</connectors>
-					<scanIntervalSeconds>10</scanIntervalSeconds>
-					<stopKey>x</stopKey>
-					<stopPort>9999</stopPort>
-				</configuration>
-				<executions>
-					<execution>
-						<id>start</id>
-						<phase>process-test-classes</phase>
-						<goals>
-							<goal>start</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>stop</id>
-						<phase>test</phase>
-						<goals>
-							<goal>stop</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 	<profiles>
@@ -204,6 +171,46 @@
 			</build>
 		</profile>
 		<profile>
+			<id>demo</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.mortbay.jetty</groupId>
+						<artifactId>jetty-maven-plugin</artifactId>
+						<version>8.1.12.v20130726</version>
+						<configuration>
+							<daemon>true</daemon>
+							<connectors>
+								<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+									<port>8280</port>
+									<maxIdleTime>60000</maxIdleTime>
+								</connector>
+							</connectors>
+							<scanIntervalSeconds>10</scanIntervalSeconds>
+							<stopKey>x</stopKey>
+							<stopPort>9999</stopPort>
+						</configuration>
+						<executions>
+							<execution>
+								<id>start</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>start</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>stop</id>
+								<phase>test</phase>
+								<goals>
+									<goal>stop</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
 			<id>ci</id>
 			<build>
 				<plugins>
@@ -232,5 +239,4 @@
 			</build>
 		</profile>
 	</profiles>
-
 </project>
