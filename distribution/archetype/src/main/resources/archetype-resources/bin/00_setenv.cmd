@@ -5,9 +5,9 @@ for /F "usebackq" %%i in (`dir "%ProgramFiles%\Java\jdk*" /B /ON`) do @set JAVA_
 :set_maven_home
 if defined MAVEN_HOME goto set_maven_cmd
 
-set MAVEN_HOME=C:\sit\apache-maven-3.0.5
+set MAVEN_HOME=C:\sit\apache-maven-3.1.1
 if not exist "%MAVEN_HOME%" (
-	set MAVEN_HOME=D:\sit\apache-maven-3.0.5
+	set MAVEN_HOME=D:\sit\apache-maven-3.1.1
 )
 
 :set_maven_cmd
