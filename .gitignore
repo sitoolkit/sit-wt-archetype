@@ -7,7 +7,6 @@
 /bin/.pause
 /bin/.step-back
 /bin/.step-forward
-/distribute/archetype/target/
 /distribution/archetype/target/
-/distribution/archetype/src/test/resources/projects/basic/archetype.properties
+/distribution/archetype/src/
 /target/
