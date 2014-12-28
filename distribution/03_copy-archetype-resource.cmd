@@ -18,7 +18,6 @@ cd /D "%RES_DIR%\main\resources\archetype-resources\.settings"
 for %%i in (sit-tester-archetype*) do call :rename-file %%i
 
 endlocal
-pause
 goto :eof
 
 rem 

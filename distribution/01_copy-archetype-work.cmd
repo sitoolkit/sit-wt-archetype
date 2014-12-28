@@ -11,4 +11,4 @@ echo ## プロジェクト内のファイル、ディレクトリをワークディレクトリにコピーします
 
 xcopy /E /S /Q /I /EXCLUDE:%~dp0exclude-work.txt "%PRJ_ROOT%" "%WORK_DIR%"
 
-pause
+
