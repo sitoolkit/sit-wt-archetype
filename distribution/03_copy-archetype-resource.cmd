@@ -9,6 +9,8 @@ if exist "%RES_DIR%" (
 	echo ## アーキタイプ資源ディレクトリを削除します。
 	del /S /Q "%RES_DIR%" > nul
 	rmdir /S /Q "%RES_DIR%" > nul
+) else (
+	mkdir "%RES_DIR%"
 )
 
 echo ## アーキタイプ資源をコピーします。
