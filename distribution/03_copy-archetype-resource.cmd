@@ -14,6 +14,7 @@ if exist "%RES_DIR%" (
 )
 
 echo ## アーキタイプ資源をコピーします。
+echo ## %RES_DIR%
 xcopy /E /I /Q /S /EXCLUDE:%~dp0exclude-resource.txt "%WORK_DIR%\target\generated-sources\archetype\src" "%RES_DIR%"
 
 cd /D "%RES_DIR%\main\resources\archetype-resources\.settings"

@@ -8,6 +8,7 @@ if exist "%WORK_DIR%" (
 )
 
 echo ## プロジェクト内のファイル、ディレクトリをワークディレクトリにコピーします。
+echo ## %WORK_DIR%
 
 xcopy /E /S /Q /I /EXCLUDE:%~dp0exclude-work.txt "%PRJ_ROOT%" "%WORK_DIR%"
 
