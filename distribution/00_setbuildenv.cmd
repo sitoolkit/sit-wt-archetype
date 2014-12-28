@@ -16,5 +16,5 @@ set MVN_CMD=%MAVEN_HOME%\bin\mvn
 
 cd /D %~dp0..
 set PRJ_ROOT=%CD%
-set WORK_DIR=%PRJ_ROOT%\target\sit-tester-archetype-work
+set WORK_DIR=%TEMP%\sit-tester-archetype-work
 
