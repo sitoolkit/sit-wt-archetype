@@ -21,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.report.encoding>UTF-8</project.report.encoding>
-		<sit-tester.version>0.8.2</sit-tester.version>
+		<sit-tester.version>0.8.3</sit-tester.version>
 	</properties>
 
 	<build>
@@ -84,13 +84,13 @@
 								<pluginExecution>
 									<pluginExecutionFilter>
 										<groupId>
-											org.mortbay.jetty
+											org.eclipse.jetty
 										</groupId>
 										<artifactId>
 											jetty-maven-plugin
 										</artifactId>
 										<versionRange>
-											[8.1.12.v20130726,)
+											[9.2.5.v20141112,)
 										</versionRange>
 										<goals>
 											<goal>start</goal>
@@ -175,9 +175,9 @@
 			<build>
 				<plugins>
 					<plugin>
-						<groupId>org.mortbay.jetty</groupId>
+						<groupId>org.eclipse.jetty</groupId>
 						<artifactId>jetty-maven-plugin</artifactId>
-						<version>8.1.12.v20130726</version>
+						<version>9.2.5.v20141112</version>
 						<configuration>
 							<daemon>true</daemon>
 							<connectors>
