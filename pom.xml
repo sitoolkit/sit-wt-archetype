@@ -155,6 +155,7 @@
 									<type>jar</type>
 									<outputDirectory>${basedir}/src/main</outputDirectory>
 									<includes>webapp/**/*</includes>
+									<excludes>webapp/WEB-INF/web.xml</excludes>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.sitoolkit.tester</groupId>
