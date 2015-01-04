@@ -6,7 +6,7 @@ SIToolkit for Web Testing (SIT-WT) はWebアプリケーションの自動テス
 * 実行した画面操作に対して自動でエビデンス（スクリーンショットと操作ログ)が取得できます。
 * ブラウザの操作にはSelenium WebDriverを使用しています。
 
-SIT-WTの詳細な説明は[Wiki](https://github.com/sitoolkit/sit-tester-archetype/wiki)を参照してください。SIT-WTを使うための操作手順は[クイックスタートガイド](https://github.com/sitoolkit/sit-tester-archetype/wiki/クイックスタートガイド)を参照してください。
+SIT-WTの詳細な説明は[Wiki](https://github.com/sitoolkit/sit-tester-archetype/wiki)を参照してください。SIT-WTを使うための操作手順は[クイックスタート](https://github.com/sitoolkit/sit-tester-archetype/wiki/クイックスタート)を参照してください。
 
 # ライセンス
 
