@@ -4,7 +4,7 @@
 
 	<groupId>org.sitoolkit.tester</groupId>
 	<artifactId>sit-tester-archetype</artifactId>
-	<version>0.10</version>
+	<version>0.10.1</version>
 	<packaging>maven-archetype</packaging>
 
 	<build>
