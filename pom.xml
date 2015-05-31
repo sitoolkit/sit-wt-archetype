@@ -2,9 +2,9 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.sitoolkit.tester</groupId>
-	<artifactId>sit-tester-archetype</artifactId>
-	<version>0.10.1</version>
+	<groupId>org.sitoolkit.wt</groupId>
+	<artifactId>sit-wt-archetype</artifactId>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
@@ -13,15 +13,15 @@
 			<version>4.11</version>
 		</dependency>
 		<dependency>
-			<groupId>org.sitoolkit.tester</groupId>
-			<artifactId>sit-tester</artifactId>
-			<version>${sit-tester.version}</version>
+			<groupId>org.sitoolkit.wt</groupId>
+			<artifactId>sit-wt</artifactId>
+			<version>${sit-wt.version}</version>
 		</dependency>
 	</dependencies>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.report.encoding>UTF-8</project.report.encoding>
-		<sit-tester.version>0.10</sit-tester.version>
+		<sit-wt.version>1.0</sit-wt.version>
 	</properties>
 
 	<build>
@@ -149,27 +149,27 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.sitoolkit.tester</groupId>
-									<artifactId>sit-tester</artifactId>
-									<version>${sit-tester.version}</version>
+									<groupId>org.sitoolkit.wt</groupId>
+									<artifactId>sit-wt</artifactId>
+									<version>${sit-wt.version}</version>
 									<type>jar</type>
 									<outputDirectory>${basedir}/src/main</outputDirectory>
 									<includes>webapp/**/*</includes>
 									<excludes>webapp/WEB-INF/web.xml</excludes>
 								</artifactItem>
 								<artifactItem>
-									<groupId>org.sitoolkit.tester</groupId>
-									<artifactId>sit-tester</artifactId>
-									<version>${sit-tester.version}</version>
+									<groupId>org.sitoolkit.wt</groupId>
+									<artifactId>sit-wt</artifactId>
+									<version>${sit-wt.version}</version>
 									<type>jar</type>
 									<outputDirectory>${basedir}/src/main/resources</outputDirectory>
 									<includes>*.*,opelog/**/*</includes>
 									<excludes>**/*.xlsx</excludes>
 								</artifactItem>
 								<artifactItem>
-									<groupId>org.sitoolkit.tester</groupId>
-									<artifactId>sit-tester</artifactId>
-									<version>${sit-tester.version}</version>
+									<groupId>org.sitoolkit.wt</groupId>
+									<artifactId>sit-wt</artifactId>
+									<version>${sit-wt.version}</version>
 									<type>jar</type>
 									<outputDirectory>${basedir}/src/test/resources/testscript</outputDirectory>
 									<includes>**/*.xlsx</includes>

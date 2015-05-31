@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.sitoolkit.tester</groupId>
-	<artifactId>sit-tester-archetype</artifactId>
-	<version>0.10.1</version>
+	<groupId>org.sitoolkit.wt</groupId>
+	<artifactId>sit-wt-archetype</artifactId>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 
 	<build>
@@ -68,8 +68,8 @@
 		</plugins>
 	</build>
 
-	<name>sit-tester-archetype</name>
-	<description>archetype for sit-tester</description>
+	<name>sit-wt-archetype</name>
+	<description>archetype for sit-wt</description>
 	<url>https://github.com/sitoolkit</url>
 	<licenses>
 		<license>
@@ -88,9 +88,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git//github.com/sitoolkit/sit-tester-archetype.git</connection>
-		<developerConnection>scm:git:git//github.com/sitoolkit/sit-tester-archetype.git</developerConnection>
-		<url>https://github.com/sitoolkit/sit-tester-archetype.git</url>
+		<connection>scm:git:git//github.com/sitoolkit/sit-wt-archetype.git</connection>
+		<developerConnection>scm:git:git//github.com/sitoolkit/sit-wt-archetype.git</developerConnection>
+		<url>https://github.com/sitoolkit/sit-wt-archetype.git</url>
 	</scm>
 	<distributionManagement>
 		<snapshotRepository>
