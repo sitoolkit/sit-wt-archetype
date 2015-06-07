@@ -4,6 +4,6 @@ call "%~dp000_setbuildenv"
 
 cd /D %~dp0archetype
 
-call "%MVN_CMD%" clean install
+call mvn clean install
 
-pause
+if exist "%~dp0pause.txt" pause

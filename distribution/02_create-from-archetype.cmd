@@ -4,8 +4,11 @@ call "%~dp000_setbuildenv"
 
 cd /D "%WORK_DIR%"
 
-echo ## ワークディレクトリのプロジェクトからアーキタイプを作成します。
-call "%MVN_CMD%" -Darchetype.filteredExtentions=java,xml,txt,groovy,cs,mdo,aj,jsp,gsp,vm,html,xhtml,properties,.classpath,.project,launch,component^
+echo ## Create archetype from project at WORK_DIRECTORY
+echo ## WORK_DIRECTORY : %WORK_DIR%
+
+call mvn -Darchetype.filteredExtentions=java,xml,txt,groovy,cs,mdo,aj,jsp,gsp,vm,html,xhtml,properties,.classpath,.project,launch,component^
 	archetype:create-from-project
 
-pause
+if exist "%~dp0pause.txt" pause
+
