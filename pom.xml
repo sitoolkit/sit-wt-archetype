@@ -33,12 +33,21 @@
 					<configuration>
 						<target name="gen-test">
 							<property name="classpath" refid="maven.test.classpath"/>
-							<java classname="org.sitoolkit.tester.TestClassGenerator" fork="true" failonerror="true">
-								<classpath>
-									<pathelement path="${classpath}"/>
-								</classpath>
-								<jvmarg value="-Dfile.encoding=${file.encoding}"/>
-							</java>
+								<java classname="org.sitoolkit.tester.TestClassGenerator" fork="true" failonerror="true">
+									<classpath>
+										<pathelement path="${classpath}"/>
+									</classpath>
+									<jvmarg value="-Dfile.encoding=${file.encoding}"/>
+								</java>
+						</target>
+						<target name="seleniumConvert">
+							<property name="classpath" refid="maven.test.classpath"/>
+								<java classname="org.sitoolkit.tester.selenium.SeleniumTestScriptConverter" fork="true" failonerror="true">
+									<classpath>
+										<pathelement path="${classpath}"/>
+									</classpath>
+									<jvmarg value="-Dfile.encoding=${file.encoding}"/>
+								</java>
 						</target>
 					</configuration>
 				</plugin>
