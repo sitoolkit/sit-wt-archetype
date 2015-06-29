@@ -173,7 +173,7 @@
 									<type>jar</type>
 									<outputDirectory>${basedir}/src/main/resources</outputDirectory>
 									<includes>*.*,opelog/**/*</includes>
-									<excludes>**/*.xlsx</excludes>
+									<excludes>**/ExcelTestScript.xlsx</excludes>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.sitoolkit.wt</groupId>
