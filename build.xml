@@ -17,4 +17,13 @@
 		</java>
 	</target>
 
+	<target name="conv-pagespec">
+		<java classname="org.sitoolkit.tester.PageSpecConverter" fork="true" failonerror="true">
+			<classpath>
+				<pathelement path="${classpath}"/>
+			</classpath>
+			<jvmarg value="-Dfile.encoding=${file.encoding}"/>
+		</java>
+	</target>
+
 </project>
