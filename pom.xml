@@ -43,14 +43,9 @@
 					<artifactId>maven-antrun-plugin</artifactId>
 					<version>1.7</version>
 					<configuration>
-						<target name="gen-test">
+						<target>
 							<property name="classpath" refid="maven.test.classpath"/>
-							<java classname="org.sitoolkit.tester.TestClassGenerator" fork="true" failonerror="true">
-								<classpath>
-									<pathelement path="${classpath}"/>
-								</classpath>
-								<jvmarg value="-Dfile.encoding=${file.encoding}"/>
-							</java>
+							<ant antfile="${basedir}/build.xml" target="${ant.target}"/>
 						</target>
 					</configuration>
 				</plugin>
@@ -183,8 +178,16 @@
 									<artifactId>sit-wt</artifactId>
 									<version>${sit-wt.version}</version>
 									<type>jar</type>
+									<outputDirectory>${basedir}/src/main/resources</outputDirectory>
+									<includes>TestScriptTemplate.xlsx</includes>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.sitoolkit.wt</groupId>
+									<artifactId>sit-wt</artifactId>
+									<version>${sit-wt.version}</version>
+									<type>jar</type>
 									<outputDirectory>${basedir}/src/test/resources/testscript</outputDirectory>
-									<includes>**/*.xlsx</includes>
+									<includes>ExcelTestScript.xlsx</includes>
 								</artifactItem>
 							</artifactItems>
 						</configuration>
@@ -240,6 +243,9 @@
 		</profile>
 		<profile>
 			<id>ci</id>
+			<properties>
+				<ant.target>gen-test</ant.target>
+			</properties>
 			<build>
 				<plugins>
 					<plugin>
