@@ -16,12 +16,6 @@
 			<groupId>org.sitoolkit.wt</groupId>
 			<artifactId>sit-wt</artifactId>
 			<version>${sit-wt.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.seleniumhq.selenium</groupId>
-					<artifactId>selenium-java</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -32,7 +26,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.report.encoding>UTF-8</project.report.encoding>
-		<sit-wt.version>1.0</sit-wt.version>
+		<sit-wt.version>1.1</sit-wt.version>
 		<selenium.version>2.46.0</selenium.version>
 	</properties>
 
