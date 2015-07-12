@@ -49,10 +49,6 @@
 					<version>2.18.1</version>
 					<configuration>
 						<argLine>-Dfile.encoding=${file.encoding}</argLine>
-						<systemProperties>
-							<webdriver.ie.driver>\sit\selenium-driver\IEDriverServer.exe</webdriver.ie.driver>
-							<webdriver.chrome.driver>\sit\selenium-driver\chromedriver.exe</webdriver.chrome.driver>
-						</systemProperties>
 					</configuration>
 				</plugin>
 				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
