@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="sit-wt" default="gen-test">
-	<target name="gen-test">
-		<java classname="org.sitoolkit.tester.TestClassGenerator" fork="true" failonerror="true">
-			<classpath>
-				<pathelement path="${classpath}"/>
-			</classpath>
-			<jvmarg value="-Dfile.encoding=${file.encoding}"/>
-		</java>
-	</target>
-	<target name="conv-selenium">
-		<java classname="org.sitoolkit.tester.selenium.SeleniumTestScriptConverter" fork="true" failonerror="true">
-			<classpath>
-				<pathelement path="${classpath}"/>
-			</classpath>
-			<jvmarg value="-Dfile.encoding=${file.encoding}"/>
-		</java>
-	</target>
+  <target name="gen-test">
+    <java classname="org.sitoolkit.tester.app.gentest.TestClassGenerator" fork="true" failonerror="true">
+      <classpath>
+        <pathelement path="${classpath}" />
+      </classpath>
+      <jvmarg value="-Dfile.encoding=${file.encoding}" />
+    </java>
+  </target>
+  <target name="conv-selenium">
+    <java classname="org.sitoolkit.tester.app.selenium.SeleniumTestScriptConverter" fork="true" failonerror="true">
+      <classpath>
+        <pathelement path="${classpath}" />
+      </classpath>
+      <jvmarg value="-Dfile.encoding=${file.encoding}" />
+    </java>
+  </target>
 
-	<target name="conv-pagespec">
-		<java classname="org.sitoolkit.tester.PageSpecConverter" fork="true" failonerror="true">
-			<classpath>
-				<pathelement path="${classpath}"/>
-			</classpath>
-			<jvmarg value="-Dfile.encoding=${file.encoding}"/>
-		</java>
-	</target>
+  <target name="conv-pagespec">
+    <java classname="org.sitoolkit.tester.app.pagespec.PageSpecConverter" fork="true" failonerror="true">
+      <classpath>
+        <pathelement path="${classpath}" />
+      </classpath>
+      <jvmarg value="-Dfile.encoding=${file.encoding}" />
+    </java>
+  </target>
 
 </project>
