@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sitoolkit" basedir=".">
+
+  <property environment="env" />
+  <property name="maven.home" value="D:/dev/asf/maven/apache-maven-3.2.5" />
+  <property name="workdir" value="${env.TEMP}/sit-wt-archetype-work" />
+  <property name="resdir" value="${basedir}/archetype/src" />
+
+  <target name="build-all" depends="01_copy-archetype-work,02_create-from-archetype,03_copy-archetype-resource,04_install-archetype">
+  </target>
+
+
+  <target name="01_copy-archetype-work">
+
+    <delete dir="${workdir}" />
+
+    <copy todir="${workdir}">
+      <fileset dir="${basedir}/../">
+        <exclude name=".git" />
+        <exclude name=".gitignore" />
+        <exclude name="distribution/archetype/" />
+        <exclude name="README.md" />
+        <exclude name="src" />
+        <exclude name="target" />
+      </fileset>
+    </copy>
+
+  </target>
+
+
+
+  <target name="02_create-from-archetype">
+
+    <exec executable="${maven.home}/bin/mvn.bat" dir="${workdir}">
+      <env key="JAVA_HOME" value="${java.home}" />
+      <arg value="-Darchetype.filteredExtentions=java,xml,txt,groovy,cs,mdo,aj,jsp,gsp,vm,html,xhtml,properties,.classpath,.project,launch,component" />
+      <arg value="archetype:create-from-project" />
+    </exec>
+
+  </target>
+
+
+
+  <target name="03_copy-archetype-resource">
+
+    <delete dir="${resdir}" />
+
+    <property name="arcres" value="${workdir}/target/generated-sources/archetype/src" />
+
+    <copy todir="${resdir}">
+      <fileset dir="${arcres}">
+        <exclude name="generated-sources/archetype/target" />
+      </fileset>
+    </copy>
+
+    <property name="settings" value="${resdir}/main/resources/archetype-resources/.settings"/>
+
+    <move todir="${settings}" includeemptydirs="false">
+        <fileset dir="${settings}" includes="*.launch" />
+        <globmapper from="sit-wt-archetype*.launch" to="__artifactId__*.launch"/>
+    </move>
+
+  </target>
+
+
+
+  <target name="04_install-archetype">
+
+    <exec executable="${maven.home}/bin/mvn.bat" dir="${basedir}/archetype">
+      <env key="JAVA_HOME" value="${java.home}" />
+      <arg value="clean" />
+      <arg value="install" />
+    </exec>
+
+  </target>
+
+</project>
