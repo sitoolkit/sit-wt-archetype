@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="sitoolkit" basedir=".">
+<project name="sitoolkit" basedir="." default="build-all">
 
   <property environment="env" />
   <property name="maven.home" value="D:/dev/asf/maven/apache-maven-3.2.5" />

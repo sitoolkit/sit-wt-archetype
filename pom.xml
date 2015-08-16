@@ -318,6 +318,7 @@
               <forkCount>0</forkCount>
               <systemProperties>
                 <sitwt.debug>true</sitwt.debug>
+                <spring.profiles.active>debug</spring.profiles.active>
               </systemProperties>
             </configuration>
           </plugin>
