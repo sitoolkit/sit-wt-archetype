@@ -180,8 +180,24 @@
                   <artifactId>sit-wt</artifactId>
                   <version>${sit-wt.version}</version>
                   <type>jar</type>
-                  <outputDirectory>${basedir}/src/test/resources/testscript</outputDirectory>
-                  <includes>ExcelTestScript.xlsx</includes>
+                  <outputDirectory>${basedir}</outputDirectory>
+                  <includes>testscript/ExcelTestScript.xlsx</includes>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.sitoolkit.wt</groupId>
+                  <artifactId>sit-wt</artifactId>
+                  <version>${sit-wt.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${basedir}</outputDirectory>
+                  <includes>pagespec/画面定義書_入力.xlsx</includes>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.sitoolkit.wt</groupId>
+                  <artifactId>sit-wt</artifactId>
+                  <version>${sit-wt.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${basedir}</outputDirectory>
+                  <includes>seleniumscript/SeleniumIDETestScript.html</includes>
                 </artifactItem>
               </artifactItems>
             </configuration>
