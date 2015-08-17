@@ -21,7 +21,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.report.encoding>UTF-8</project.report.encoding>
-    <sit-wt.version>2.0-SNAPSHOT</sit-wt.version>
+    <sit-wt.version>2.0</sit-wt.version>
     <selenium.version>2.46.0</selenium.version>
   </properties>
 
