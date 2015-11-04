@@ -21,7 +21,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.report.encoding>UTF-8</project.report.encoding>
-    <sit-wt.version>2.0</sit-wt.version>
+    <sit-wt.version>2.0.1</sit-wt.version>
     <selenium.version>2.46.0</selenium.version>
   </properties>
 
@@ -142,6 +142,7 @@
     <profile>
       <id>setup</id>
       <build>
+        <defaultGoal>dependency:unpack</defaultGoal>
         <plugins>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -208,6 +209,7 @@
     <profile>
       <id>demo</id>
       <build>
+        <defaultGoal>test</defaultGoal>
         <plugins>
           <plugin>
             <groupId>org.eclipse.jetty</groupId>
