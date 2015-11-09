@@ -59,7 +59,7 @@
 
   <target name="03_copy-archetype-resource">
 
-    <delete dir="${resdir}" />
+    <delete dir="${resdir}" failonerror="false"/>
 
     <property name="arcres" value="${workdir}/target/generated-sources/archetype/src" />
 
